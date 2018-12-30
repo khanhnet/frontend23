@@ -1,0 +1,65 @@
+body {
+	width: 815px;
+	
+
+}
+.check {
+	
+	width: 200px;
+	height: 20px;
+	display: inline-block;
+}
+.phone {
+	height: 20px;
+	display: inline-block;
+}
+p {
+	height: 4px;
+}
+#a {
+	
+	padding-left: 10px;
+}
+#c {
+	width: 190px;
+}
+
+img {
+	margin-right: 10px;
+}
+
+.row1 {
+	padding-left: 10px;
+}
+#sales1 {
+	margin-left: 620px;
+	margin-top: -30px;
+
+}
+#sales2 {
+	margin-left: 620px;
+	margin-top: -50px;
+}
+#kinhdoanh1 {
+margin-left: 35px;
+}
+#kinhdoanh2 {
+	margin-left: 60px;
+}
+.x {
+
+    margin-block-end: -15px;
+}
+a {
+	text-decoration: none;
+	color: black;
+}
+a:hover {
+	color: blue;
+	text-decoration: underline;
+}
+p:hover {
+	color: blue;
+	text-decoration: underline;
+
+}

@@ -1,0 +1,313 @@
+body {
+	background-image: url(../images3/tuyet.jpg);
+	font-size: 12px !important;
+	font-family: arial !important;
+	
+}
+
+#boss {
+	width: 800px;
+	height: 1455px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: white;
+	padding: 5px;
+
+
+}
+#zent {
+	
+	width: 800px;
+	align-items: center;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+.home {
+	color: orange;
+	width: 80px;
+	text-align: center;
+	height: 25px;
+	background-image: url(../images3/nav.gif);
+	float: left;
+	text-decoration: none;
+	padding-top: 8px;
+
+	
+}
+#bar {
+	width: 390px;
+
+}
+.line {
+	float: left;
+}
+#href {
+	width: 800px;
+	height: 30px;
+	background-color: white;
+	padding-top: 40px;
+
+
+}
+#danhmuc {
+	background-image: url(../images3/menu_bar.gif);
+	width: 140px;
+	height: 25px;
+	text-align: center;
+	color: white;
+	padding-top: 5px;
+
+}
+#maindanhmuc {
+	border-width: 2px;
+	border-color: grey;
+	border-style: solid;
+	width: 140px;
+	height: 120px;
+	text-align: left;
+	margin-top: -8px;
+
+}
+.dmc {
+	color: black;
+	text-decoration: none;
+	padding-left: 5px;
+	line-height: 20px;
+	
+}
+#vbzent {
+	background-color: #e67e22;
+	color: white;
+	width: 480px;
+	text-align: left;
+	border-radius: 10px;
+	padding-left: 5px;
+	margin-left: 10px;
+	margin-right: 10px;
+	padding-right: 5px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+.row1 {
+	float: left;
+	display: inline-block;
+}
+#maintuvan {
+	border-width: 2px;
+	border-color: grey;
+	border-style: solid;
+	width: 140px;
+	height: 100px;
+	text-align: left;
+	margin-top: -8px;
+}
+#tuvan {
+	background-image: url(../images3/menu_bar.gif);
+	width: 140px;
+	height: 25px;
+	text-align: center;
+	color: white;
+	padding-top: 5px;
+}
+.onoff {
+	padding-top: 5px;
+	text-align: center;
+	
+}
+#cntt {
+	background-image: url(../images3/main_bar_left.gif);
+	width: 475px;
+	height: 20px;
+	text-align: left;
+	color: white;
+	padding-top: 5px;
+	padding-left: 5px;
+}
+
+#chuy {
+	background-image: url(../images3/menu_bar.gif);
+	width: 140px;
+	height: 25px;
+	text-align: center;
+	color: white;
+	padding-top: 5px;
+	
+}
+#mainchuy {
+	border-width: 2px;
+	border-color: grey;
+	border-style: solid;
+	width: 140px;
+	height: 140px;
+	text-align: left;
+	margin-top: 20px;
+	margin-right: 520px;
+	
+	
+	}
+.row2 {
+	float: left;
+}
+#cnttgiacong {
+	margin-top: -200px;
+	margin-left: 150px
+
+}
+.linkcam {
+	text-decoration: none;
+	color: orange;
+}
+#vb1 {
+	margin-right: 170px;
+	margin-top: -110px;
+	margin-left: 160px;
+}
+#new {
+	background-image: url(../images3/menu_bar.gif);
+	width: 140px;
+	height: 25px;
+	text-align: center;
+	color: white;
+	padding-top: 5px;
+	
+}
+#mainnew {
+	border-width: 2px;
+	border-color: grey;
+	border-style: solid;
+	width: 140px;
+	height: 170px;
+	text-align: left;
+	margin-top: -160px;
+	margin-left: 654px;
+	
+	
+	}
+#phanmem {
+border-style: solid;
+    border-color: grey;
+    border-width: 1px;
+    padding: 2px;
+	}
+#vb2 {
+	margin-right: 320px;
+
+}
+#gd {
+	background-image: url(../images3/main_bar_right.gif);
+	width: 475px;
+	height: 20px;
+	text-align: right;
+	color: white;
+	padding-top: 5px;
+	padding-right: 5px;
+	margin-top: 48px;
+
+}
+#giaoduc {
+	margin-left: 150px;
+	margin-top: -350px;
+	
+
+}
+#leroi {
+    width: 155px;
+    height: 108px;
+    margin-left: 475px;
+    margin-top: -75px;
+    padding: 2px;
+    border-style: solid;
+    border-color: grey;
+    border-width: 1px;
+}
+#vb3 {
+	margin-right: 170px;
+	margin-left: 160px;
+
+}
+#tm {
+	background-image: url(../images3/main_bar_left.gif);
+	width: 475px;
+	height: 20px;
+	text-align: left;
+	color: white;
+	padding-top: 5px;
+	padding-left: 5px;
+	margin-top: 48px;
+
+}
+#thuongmai {
+	margin-left: 150px;
+	margin-top: -30px;
+	
+
+}
+#doanhnghiep {
+    width: 155px;
+    height: 108px;
+    margin-left: 150px;
+    margin-top: -75px;
+    border-style: solid;
+    border-color: grey;
+    border-width: 1px;
+}
+#dichvu {
+margin-left: 150px;
+
+}
+#dv{
+	text-align: right;
+
+}
+#vb4 {
+	margin-right: 315px;
+
+}
+#anhvien {
+	 width: 155px;
+    height: 108px;
+    margin-left: 475px;
+    margin-top: -75px;
+    padding: 2px;
+    border-style: solid;
+    border-color: grey;
+    border-width: 1px;
+
+}
+.right1 {
+margin-left: 355px;
+}
+.right2 {
+	margin-left: 390px;
+}
+#img5 {
+margin-left: 650px;
+margin-top: 35px;
+}
+#img4 {
+	margin-left: 650px;
+	margin-top: 35px;
+}
+#img3 {
+	margin-left: 650px;
+margin-top: -500px;
+}
+#end {
+	width: 800px;
+	background-color: #424242;
+	color: white;
+	height: 30px;
+	text-align: center;
+	margin-top: 68px;
+	padding-top: 15px;
+	border-top: 3px;
+	border-style: solid;
+	border-color: orange;
+	border-left: none;
+	border-right: none;
+	border-bottom: none;
+}
+a:hover {
+	color: green;
+}

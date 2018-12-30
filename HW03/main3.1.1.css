@@ -1,0 +1,32 @@
+body {
+	color: red;
+	font-size: 12px;
+	text-align: center;
+	
+}
+p:hover{
+	color: green;
+}
+
+.a {
+	float: left;
+	width: 100px;
+	height: 150px;
+	border-color: grey;
+	border-width: 1px;
+	border-style: solid;
+}
+.white {
+	width: 8px !important;
+	border:none;
+	
+	
+}
+.box:hover {
+	border-color: red;
+	border-width: 1px;
+	border-style: solid;
+
+
+	
+}
