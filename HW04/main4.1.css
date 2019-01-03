@@ -1,0 +1,158 @@
+body {
+	background-image: url(../images4/bg.jpg);
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+}
+#main {
+width: 100%;
+padding: 0;
+margin-left: auto;
+margin-right: auto;
+}
+#menu {
+	
+height: 100px;
+margin-bottom:5px;
+
+}
+.sign {
+	float: left;
+	list-style: none;
+	text-decoration: none;
+	padding-left: 20px;
+    padding-right: 20px;
+    line-height: 42px;
+}
+#zent {
+	width: 40%;
+	font-size: 30px;
+	padding-left: 10px;
+}
+.sign>a {
+	text-decoration: none;
+	color: black;
+}
+#in {
+	border-radius: 10px;
+	text-align: center;
+	padding-left: 10px;
+	padding-right: 10px;
+	border-style: solid;
+	border-color: #d2d1d2;
+	background-color: #d2d1d2;
+}
+
+
+#left {
+	width: 15%;
+min-height: 500px;
+float:left;
+margin-bottom: 5px;
+}
+#left1 {
+	width: 33%;
+float:left;
+}
+.item {
+	list-style: none;
+	text-decoration: none;
+	padding-left: 20px;
+    padding-right: 20px;
+    line-height: 42px;
+}
+.item>a {
+	text-decoration: none;
+	color: #a49ba5;
+
+}
+.item>a:hover {
+	color: red;
+}
+#content {
+width: 40%;
+min-height: 700px;
+float:left;
+}
+#content1 {
+width: 33%;
+float:left;
+}
+#right1 {
+width: 33%;
+float:right;
+}
+.up {
+background-color: white;
+width: 170px;
+padding:0px;
+border-top-right-radius: 10px;
+border-top-left-radius: 10px;
+
+   
+
+}
+.down {
+	
+	background-size: 170px 200px;
+	width: 170px;
+	height: 200px;
+	color: white;
+	padding: 0px;
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+	font-size: 9px;
+    
+
+}
+
+#footer {
+height: 50px;
+clear: both;
+}
+
+
+.blue {
+	color: blue;
+	padding-right: 10px;
+	padding-left: 20px;
+}
+span {
+	padding-left: 15px;
+}
+.footer2 {
+	height: 30px;
+	clear: both;
+	background: black;
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+	opacity: 0.5;
+}
+.content2 {
+	height: 170px;
+
+}
+.footer3 {
+	height: 40px;
+	clear: both;
+	background: black;
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+	opacity: 0.5;
+}
+.content3 {
+	height: 160px;
+
+}
+.item1 {
+list-style: none;
+text-decoration: none;
+    line-height: 20px;
+}
+font {
+	padding-left: 5px;
+}
+.down :hover {
+	background:white;
+	opacity: 0.5;
+}

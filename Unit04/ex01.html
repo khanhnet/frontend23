@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ex01</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		div {
+			margin: 40px 50px 60px;
+			/* margin-top: 40px;
+			margin-right: 50px;
+			margin-left : 50px;
+			margin-bottom: 60px; */
+		}
+		.name:after {
+        content:" Zent Group";
+        color: red;
+      }
+      .name:before {
+      	content: "Zent";
+      	color: blue;
+      }
+      .poi {
+      	position: fixed;
+      	left: 500px;
+      	bottom: 70px;
+      	border-radius: 100px;
+      	width: 100px;
+      	height: 100px;
+      	color: red;
+      	background-color: orange;
+      	text-align: center;
+      	z-index: 3;
+      }
+      .child {
+      	position: absolute;
+      	background-color: red;
+      	border-radius: 10px;
+      	width: 500px;
+      	height: 500px;
+      	top: 1000px;
+      	left: 350px;
+      	z-index: 2;
+
+      }
+	</style>
+</head>
+<body style="height: 1000px">
+<div>Lorem ipsum dolor sit amet.</div>
+<h1>Lorem ipsum dolor sit amet.</h1>
+<div class="name">
+      chào mừng bạn đã đến với khóa học tại 
+   </div>
+   <div class="poi" ></div>
+   <div class="child"></div>
+
+</body>
+</html>

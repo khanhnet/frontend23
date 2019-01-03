@@ -1,0 +1,157 @@
+#menu {
+    padding-left: 0;
+    height: 42px;
+    background: #56d615;
+    width: 100%;
+}
+.item {
+    float: left;
+    list-style: none;
+    padding-left: 10px;
+    padding-right: 10px;
+    line-height: 42px;
+    position: relative; 
+}
+.item>a {
+    color: #fff;
+    text-decoration: none
+}
+.submenu {
+    display: none;
+    padding-left: 0;
+    width: 180px;
+    right: 50px;
+    background: #9bf66d;
+    position: absolute
+}
+.submenu1 {
+	 display: none;
+    padding-left:0;
+    width: 180px;
+    left: 180px;
+    top: 10px;
+    background: #9bf66d;
+    position: absolute
+
+}
+
+.item:hover .submenu {
+    display: block
+}
+
+.item:hover .submenu .item1 {
+    float: none;
+    padding-left: 10px;
+    padding-right: 0
+    
+}
+.item1 {
+	
+	float: left;
+    list-style: none;
+    line-height: 42px;
+    position: relative; 
+    border-color: #56d615;
+    border-style: solid;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+.item1>a {
+    color: black;
+    text-decoration: none;
+    padding-left: 10px;
+}
+.fas {
+	color: white;
+}
+.item1>.submenu:hover {
+	background-color: #9bf66d;
+}
+.item1:hover .submenu1 {
+    display: block
+}
+
+.item1:hover .submenu1 .item2 {
+    float: none;
+    padding-left: 10px;
+
+   
+    
+}
+.item1:hover  {
+	background-color: #56d615;
+	
+}
+.item1:hover>a {
+	color: white;
+}
+.item2 {
+	
+	float: left;
+    list-style: none;
+    padding-left: 0px;
+    padding-right: 20px;
+    line-height: 42px;
+    position: relative; 
+    background-color: #56d615;
+    border-bottom: white 1px solid;
+   
+}
+.item2>a {
+    color: black;
+    text-decoration: none
+}
+.item2:hover>a {
+	color: white;
+}
+.submenu2 {
+	 display: none;
+    padding-left: 0;
+    width: 240px;
+    left: 10px;
+    background: #9bf66d;
+    position: absolute
+
+}
+.item:hover .submenu2 {
+    display: block
+}
+
+.item:hover .submenu2 .item1 {
+    float: none;
+    padding-left: 10px;
+    padding-right: 0
+    
+}
+.item1>.submenu2:hover {
+	background-color: #9bf66d;
+}
+#search {
+	border-color: white;
+	border-width: 1px;
+	border-radius: 30px;
+	height: 30px;
+	border-style: solid;
+	height: 32px;
+	width: 0px;
+	padding-left: 10px;
+	padding-right: 22px;
+	bottom: -4px;
+	float: right;
+	right: 50px;
+}
+#xdm {
+	border: 1px white solid;
+	border-bottom: none;
+	border-top: none;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+.bo {
+	color: white;
+	float: left;
+    list-style: none;
+    line-height: 42px;
+    position: relative;
+}

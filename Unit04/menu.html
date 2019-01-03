@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>menu</title>
+	<link rel="stylesheet" href="css/font-awesome.css">
+	<style type="text/css">
+	#menu {
+    padding-left: 0;
+    height: 42px;
+    background: green
+}
+
+.item {
+    float: left;
+    list-style: none;
+    padding-left: 20px;
+    padding-right: 20px;
+    line-height: 42px;
+    position: relative
+}
+
+.item>a {
+    color: #fff;
+    text-decoration: none
+}
+
+.item:hover {
+    background: #00f
+}
+
+.item:hover>a {
+    color: red
+}
+
+.submenu {
+    display: none;
+    padding-left: 0;
+    width: 160px;
+    left: 0;
+    background: green;
+    position: absolute
+}
+
+.item:hover .submenu {
+    display: block
+}
+
+.item:hover .submenu .item {
+    float: none;
+    padding-left: 10px;
+    padding-right: 0
+}
+	</style>
+</head>
+<body>
+	<ul id="menu">
+		<li class="item"><a  >home</a></li>
+		<li class="item">
+			<a >login <i class="fa fa-spinner fa-spin fa-3x "></i></a>
+			<ul class="submenu">
+				<li class="item"><a href="">facebok</a></li>
+				<li class="item"><a href="">zing</a></li>
+				<li class="item"><a href="">google</a></li>
+			</ul>
+		</li>
+		<li class="item"><a >logout</a></li>
+	</ul>
+
+</body>
+</html>
