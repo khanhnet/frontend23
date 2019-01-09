@@ -1,4 +1,4 @@
-body {
+	body {
 	background-image: url(../images4/bg.jpg);
 	width: 100%;
 	margin: 0px;
@@ -139,6 +139,7 @@ span {
 	border-bottom-right-radius: 10px;
 	border-bottom-left-radius: 10px;
 	opacity: 0.5;
+	z-index: 10;
 }
 .content3 {
 	height: 160px;

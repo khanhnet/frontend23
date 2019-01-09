@@ -1,0 +1,93 @@
+#login {
+			margin: auto;
+			width: 30%;
+			height: 400px;
+			background-color: #ccc;
+			padding: 20px;
+			border: 1px solid black;
+			border-radius: 10px;
+		}
+		#header {
+			text-align: center;
+			height: 160px;
+
+		}
+		#content {
+			height: 120px;
+		}
+		#footer {
+			display: block;
+		}
+		a {
+			text-decoration: none;
+		}
+		.a {
+			color: white;
+
+		}
+		#fb {
+			padding-top: 10px;
+			margin: auto;
+			width: 80%;
+			height: 30px;
+			background-color: blue;
+			border: 1px solid blue;
+			border-radius: 10px;
+			font-size: 20px;
+			margin-bottom: 20px;
+		}
+		#twitter {
+
+			padding-top: 10px;
+			margin: auto;
+			width: 80%;
+			height: 30px;
+			background-color: orange;
+			border: 1px solid orange;
+			border-radius: 10px;
+			font-size: 20px;
+		}
+		.in {
+		margin: auto;
+		width: 95%;
+		height: 30px;
+		border: 1px solid black;
+		border-radius: 10px;
+		margin-bottom: 10px;
+		padding-left: 20px;
+
+		}
+		#left {
+			
+			font-size: 20px;
+			float: left;
+		}
+		#x{
+			float: right;
+		}
+		#row1 {
+			display: inline-block;
+			text-align: left;
+			height: 30px;
+			width: 100%;
+		}
+		.business {
+			float: left;
+		}
+		.get {
+			color: blue;
+		}
+		.font {
+			font-size: 20px;
+		}
+		#submit {
+			padding-bottom: 10px;
+			float: right;
+			width: 15%;
+			height: 45px;
+			border: 1px solid black;
+			border-radius: 10px;
+			color: white;
+			font-size: 20px;
+			background-color: red;
+		}

@@ -1,0 +1,64 @@
+#menu {
+	width: 100%;
+	height: 40px;
+	background-color: black;
+	padding-top: 10px;
+	padding-left: 0;
+	
+}
+.item {
+	text-align: center;
+    float: left;
+    list-style:none;
+    padding-left: 20px;
+    padding-right: 20px;
+    line-height: 30px;
+    position: relative;
+    border-right: 1px white solid;
+
+}
+
+a {
+	text-decoration: none
+}
+.item>a {
+	color: white;
+}
+.item:hover {
+	background-color: red;
+}
+.submenu {
+	top: 40px;
+    display: none;
+    padding-left: 0;
+    width: 160px;
+    left: 0;
+    background:#e5e5e5;
+    position: absolute
+
+}
+.item1 {
+	float: left;
+    list-style: none;
+    text-align: left;
+
+   padding-left: 10px;
+    line-height: 42px;
+    position: relative
+
+
+}
+.item1>a {
+	color: black;
+
+}
+
+.item:hover .submenu {
+    display: block
+
+}
+.item:hover .submenu .item1 {
+    float: none;
+  
+    padding-right: 0
+}
