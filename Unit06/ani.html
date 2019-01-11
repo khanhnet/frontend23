@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<style type="text/css">
+		/* div {
+			width: 200px;
+			height: 200px;
+			border-radius: 100px;
+			position: relative;
+			background-color: red;
+		
+			animation: zent;
+			-moz-animation: zent;firefox
+			-o-animation: zent;opera
+			-ms-animation: zent;ie
+			-webkit-animation: zent;safari
+		
+			animation-duration: 2s;
+			transform: scale(2,2);
+			animation-iteration-count: infinite;
+		
+		}
+		@keyframes zent {
+			0% {
+				top: 0;
+				left: 0;
+				background-color: blue;
+			}
+			25% {
+				top: 0;
+				left: 500px;
+				background-color: green;
+			}
+			50% {
+				top: 500px;
+				left: 0;
+				background-color: black;
+			}
+			75% {
+				top: 500px;
+				left: 500px;
+				background-color: pink;
+			}
+			100% {
+				top: 0;
+				left: 0;
+				background-color: yellow;
+			}
+		
+		} */
+		.box {
+			width: 25%;
+			height: 200px;
+			float: left;
+		}
+		
+		.green {
+			background-color: green;
+		}
+		.red {
+			background-color: red;
+		}
+		.blue {
+			background-color: blue;
+		}
+		.black {
+			background-color: black;
+		}
+		@media(max-width: 992px) {
+			.box {
+				width: 50%;
+			}
+			
+		}
+		@media(min-width: 993px) {
+			.box {
+				width: 25%;
+			}
+			
+		}
+			@media(max-width: 500px) {
+			.box {
+				width: 100%;
+			}
+			
+		}
+	</style>
+</head>
+<body>
+	<div class="box green"></div>
+	<div class="box red"></div>
+	<div class="box blue"></div>
+	<div class="box black"></div>
+
+</body>
+</html>

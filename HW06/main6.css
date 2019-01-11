@@ -1,0 +1,295 @@
+
+#main {
+	width: 100%;
+	font-family: "Times new Roman";
+
+}
+#menu {
+	width: 520px;
+	text-align: center;
+	margin: auto;
+	}
+	nav {
+	height: 42px;
+	margin: auto;
+	
+}
+ul {
+	padding: 0;
+	margin: auto;
+}
+.item {
+	margin: auto;
+	padding-left: 10px;
+	padding-right: 10px;
+	list-style: none;
+	line-height: 42px;
+	float: left;
+	border-top: 1px #ccc solid;
+	border-bottom: 1px #ccc solid;
+
+}
+
+.item a {
+	color: black;
+	text-decoration: none;
+}
+#content {
+		background-color: #e5e5e5;
+		width: 100%;
+		font-size: 17px;
+		padding-bottom: 20px;
+		
+}
+#bigfont {
+	font-size: 55px;
+    padding-top: 140px;
+    text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: #12A682;
+
+
+}
+.item1 {
+	padding-left: 10px;
+	padding-right: 10px;
+	display: inline-block;
+	width: 30%;
+
+
+}
+.logo {
+	border: none;
+
+}
+.img {
+	width: 100%;
+
+
+}
+.blue>a {
+	color:#00B0F0; 
+
+}
+.blue {
+	color:#00B0F0; 
+}
+a {
+	text-decoration: none;
+
+}
+#content1 {
+	width: 90%;
+margin: auto;
+}
+#contentimg {
+	width: 90%;
+
+margin: auto;
+}
+.right {
+	float: right;
+}
+.left {
+	float: left;
+	width: 55%;
+	padding-right: 20px;
+}
+.right1 {
+	display: inline-block;
+	text-align: left;
+
+
+
+}
+.center {
+	text-align: center;
+}
+.fontmin {
+	font-size: 15px;
+}
+ #content2 {
+	width: 100%;
+	float: left;
+	background-color: #00B0F0; 
+	color: white;
+	margin-top: 30px;
+	
+	
+} 
+.zigzag {
+  position: relative;
+  width: 100%;
+  -webkit-filter: drop-shadow(rgba(0, 0, 0, 0.8) 0px 1px 2px);
+}
+.zigzag:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -10px;
+  width: 100%;
+  height: 10px;
+}
+#content2:before {
+  background:
+    linear-gradient(
+      45deg, transparent 33.333%,
+      #E2E2E2 33.333%, #00B0F0 66.667%,
+      transparent 66.667%
+    ),
+    linear-gradient(
+      -45deg, transparent 33.333%,
+      #E2E2E2 33.333%, #00B0F0 66.667%,
+      transparent 66.667%
+    );
+  background-size: 20px 40px;
+}	 
+input {
+	width: 100%;
+}
+.ccc>a {
+	color: #ccc;
+}
+#send {
+	width: 80px;
+	float: left;
+	background: #48A0B4;
+	margin-top: 15px;
+height: 25px;
+border: 1px greenyellow ridge;
+color: white;
+}
+.fab {
+	background-color: #48A0B4;
+	color:white;
+	font-size: 20px;
+border: 1px solid #28A0B4;
+border-radius: 17px;
+height: 25px;
+width: 29px;
+text-align: center;
+padding-top: 5px;
+margin-right: 10px;
+}
+.pdl {
+	width: 90%;
+margin: auto;
+}
+
+@media (max-width: 775px) {
+	.item1 {
+		padding: 0;
+		width: 48%;
+		font-size: 13px;
+	}
+	.left {
+		width: 100%;
+
+	}
+	#menu {
+		width: 450px;
+	}
+	.logo {
+		width: 50%;
+	}
+	.item {
+		font-size: 12px;
+		padding-right: 5px;
+		padding-left: 5px;
+	}
+	
+}
+@media (max-width: 480px){
+	
+	
+
+	.item1 {
+		padding: 0;
+		width: 100%;
+		padding-right: 10px;
+	}
+		.left {
+		width: 100%;
+
+	}
+	#menu {
+		width: 350px;
+	}
+	.logo {
+		width: 40%;
+	}
+	.item {
+		font-size: 10px;
+		padding-right: 5px;
+		padding-left: 5px;
+	}
+
+
+
+} 
+.item:hover a {
+	color: blue;
+}
+.item1:hover a {
+	color: red;
+}
+.fab {
+			-o-animation: example; 
+			-ms-animation: example; 
+			-webkit-animation:example; 
+	 -moz-animation-name: example; 
+     
+      animation-name: example;
+      animation-duration: 1s;
+      animation-iteration-count: infinite;
+    }
+  
+    
+    @keyframes example {
+      from {background-color: yellow;}
+      to {background-color: #48A0B4;}
+    }
+
+
+#send:hover {
+			-o-animation: exam; 
+			-ms-animation: exam; 
+			-webkit-animation:exam; 
+	 -moz-animation-name: exam; 
+     
+      animation-name: exam;
+      animation-duration: 1s;
+      animation-iteration-count: infinite;
+    }
+  
+    
+    @keyframes exam {
+    	 from {background-color: #48A0B4;}
+      to {background-color: #D26D68;}
+     
+    }
+    #bigfont {
+			-o-animation: ex; 
+			-ms-animation: ex; 
+			-webkit-animation:ex; 
+	 -moz-animation-name: ex; 
+     
+      animation-name: ex;
+      animation-duration: 2s;
+      animation-iteration-count: infinite;
+    }
+  
+    
+    @keyframes ex {
+    	 from {color: red;}
+    
+    	 to {color: green;}
+      
+      
+    
+     
+    }
+
+
+    

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+	<style type="text/css">
+		nav {
+			height: 42px;
+			width: 100%;
+			background-color: green;
+		}
+		.item {
+			float: left;
+			padding-left: 10px;
+			padding-right: 10px;
+			list-style: none;
+			line-height: 42px;
+		}
+		.item a {
+			text-decoration: none;
+			color: #ffff;
+		}
+		.item:hover {
+			background-color: blue;
+		}
+		.item:hover a {
+			color: red;
+		}
+		.item:first-child {
+			display: none;
+			color:#ffff;
+		}
+		.item:first-child:hover ~ .item {
+			display: block;
+			color:#ffff;
+			background-color: green;
+			float: none;
+		}
+/* }
+.item1 {
+	float: left;
+	padding-left: 10px;
+	padding-right: 10px;
+	list-style: none;
+	line-height: 42px;
+}
+.item1 a {
+	text-decoration: none;
+	color: #ffff;
+}
+.item1:hover {
+	background-color: blue;
+}
+.item1:hover a {
+	color: red;
+}
+	
+.submenu {
+    display: none;
+    padding-left: 0;
+    width: 160px;
+    left: 10px;
+    background: green;
+    position: absolute
+}
+
+.item:hover .submenu {
+    display: block
+}
+
+.item:hover .submenu .item1 {
+    float: none;
+    padding-left: 10px;
+    padding-right: 0;
+} */
+
+
+		@media (max-width: 607px){
+			.item {
+				display: none;
+			}
+			.item:first-child {
+				display: block;
+			}
+		}
+	</style>
+</head>
+<body>
+	<nav>
+		<ul>
+
+			<li class="item">
+				<a href=""><i class="fas fa-bars"></i></a>
+				
+
+				
+			</li>
+			<li class="item"><a href="">home</a></li>
+			<li class="item"><a href="">home</a></li>
+			<li class="item"><a href="">home</a></li>
+			<li class="item"><a href="">home</a></li>
+			<li class="item"><a href="">home</a></li>
+			<li class="item"><a href="">home</a></li>
+			<li class="item"><a href="">home</a></li>
+			<li class="item"><a href="">home</a></li>
+			<li class="item"><a href="">home</a></li>
+		
+		</ul>
+	</nav>
+
+</body>
+</html>
