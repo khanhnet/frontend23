@@ -27,6 +27,17 @@
 		.item:hover a {
 			color: red;
 		}
+				.multi {
+	float: left ;
+	font-size: 35px;
+}
+.orange>a {
+	color: #ff3d3d !important;
+}
+.orange {
+	color: #ff3d3d !important;
+}
+
 		.item:first-child {
 			display: none;
 			color:#ffff;
@@ -37,43 +48,6 @@
 			background-color: green;
 			float: none;
 		}
-/* }
-.item1 {
-	float: left;
-	padding-left: 10px;
-	padding-right: 10px;
-	list-style: none;
-	line-height: 42px;
-}
-.item1 a {
-	text-decoration: none;
-	color: #ffff;
-}
-.item1:hover {
-	background-color: blue;
-}
-.item1:hover a {
-	color: red;
-}
-	
-.submenu {
-    display: none;
-    padding-left: 0;
-    width: 160px;
-    left: 10px;
-    background: green;
-    position: absolute
-}
-
-.item:hover .submenu {
-    display: block
-}
-
-.item:hover .submenu .item1 {
-    float: none;
-    padding-left: 10px;
-    padding-right: 0;
-} */
 
 
 		@media (max-width: 607px){
@@ -82,29 +56,26 @@
 			}
 			.item:first-child {
 				display: block;
+				
+				
 			}
 		}
 	</style>
 </head>
 <body>
 	<nav>
+		<span class=" multi "><span class="orange">M</span>ulti</span>
+				
 		<ul>
+					<li class="item  "><a href=""><i class="fas fa-bars bar"></i></a></li>
 
-			<li class="item">
-				<a href=""><i class="fas fa-bars"></i></a>
-				
-
-				
-			</li>
-			<li class="item"><a href="">home</a></li>
-			<li class="item"><a href="">home</a></li>
-			<li class="item"><a href="">home</a></li>
-			<li class="item"><a href="">home</a></li>
-			<li class="item"><a href="">home</a></li>
-			<li class="item"><a href="">home</a></li>
-			<li class="item"><a href="">home</a></li>
-			<li class="item"><a href="">home</a></li>
-			<li class="item"><a href="">home</a></li>
+			
+			
+					<li class="item orange"><a href="">HOME</a></li>
+					<li class="item  "><a href="">SERVICES</a></li>
+					<li class="item  "><a href="">BLOG</a></li>
+					<li class="item  orange"><a href="">PORTFOLIO</a></li>
+					<li class="item  "><a href="">CONTACT</a></li>
 		
 		</ul>
 	</nav>
