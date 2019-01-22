@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+    <style type="text/css">
+        body {
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+	<div id="size">
+		<h3>Cỡ chữ</h3>
+	</div>
+        <input type="button" value="Mặc định" onclick="change_font_size()"/>
+        <input   type="button" value="Lớn" onclick="increaseFontSize()"/>
+        <input  s  type="button" value="Nhỏ" onclick="decreaseFontSize()"/>
+      <p id="mess">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+      cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+      proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        
+
+
+	<script type="text/javascript">
+     var min=8;
+var max=18;
+function change_font_size() {
+   document.getElementById("mess").style.fontSize = '12px'
+}
+function increaseFontSize() {
+ 
+var p = document.getElementsByTagName('p');
+for(i=0;i<p.length;i++) {
+ 
+if(p[i].style.fontSize) {
+var s = parseInt(p[i].style.fontSize.replace("px",""));
+} else {
+ 
+var s = 12;
+}
+if(s!=max) {
+ 
+s += 40*s/100;
+}
+p[i].style.fontSize = s+"px"
+ 
+}
+}
+function decreaseFontSize() {
+var p = document.getElementsByTagName('p');
+for(i=0;i<p.length;i++) {
+ 
+if(p[i].style.fontSize) {
+var s = parseInt(p[i].style.fontSize.replace("px",""));
+} else {
+ 
+var s = 12;
+}
+if(s!=min) {
+ 
+s -=  40*s/100;
+}
+p[i].style.fontSize = s+"px"
+ 
+}
+}
+	</script>
+
+</body>
+</html>

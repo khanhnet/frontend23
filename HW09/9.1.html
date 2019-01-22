@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		.section {
+			float: left;
+
+		}
+		.content {
+			position: absolute;
+			
+			width: 500px;
+			padding-bottom: 20px;
+			padding-right: 10px;
+			padding-left: 10px;
+   
+			display: none;
+		}
+		.tab {
+			background-color: #9f9f9f;
+			width: 50px;
+			margin-left: 10px;
+			text-align: center;
+    		color: white;
+			
+		}
+		.content {
+			background-color: white;
+			position: absolute;
+    		left: 28px;
+		}
+		#container {
+			width: 550px;
+			height: 300px;
+			
+			background-image: url(../images6/san-go-cao-cap-maple-carelia-uyenminh.com.jpg);
+			padding: 10px;
+		}
+		
+		
+	</style>
+</head>
+<body>
+	<div id="container">
+		<div class="section">
+			<div onclick="t1()" class="tab">Tab 1</div>
+			<div class="content" id="ac1">
+				<h2>Section 1</h2>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco .
+			</div>
+		</div>
+
+		<div class="section">
+			<div onclick="t2()" class="tab">Tab 2</div>
+			<div class="content" id="ac2">
+				<h2>Section 2</h2>
+				 Ut enim ad minim veniam,
+				 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				 consequat. 
+			</div>
+		</div>
+
+		<div class="section">
+			<div onclick="t3()" class="tab">Tab 3</div>
+			<div class="content" id="ac3">
+				<h2>Section 3</h2>
+				 Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			</div>
+		</div>
+
+
+
+	</div>
+<script type="text/javascript">
+	function t1()  {
+		
+		document.getElementById("ac1").style.display = 'block'
+		document.getElementById("ac2").style.display = 'none'
+		document.getElementById("ac3").style.display = 'none'
+		document.getElementsByClassName("tab")[0].style.backgroundColor = 'white'
+		document.getElementsByClassName("tab")[1].style.backgroundColor = '#9f9f9f'
+		document.getElementsByClassName("tab")[2].style.backgroundColor = '#9f9f9f'
+
+		document.getElementsByClassName("tab")[0].style.color = 'black'
+		document.getElementsByClassName("tab")[1].style.color = 'white'
+		document.getElementsByClassName("tab")[2].style.color = 'white'
+	}
+	function t2()  {
+		document.getElementById("ac2").style.display = 'block'
+		document.getElementById("ac1").style.display = 'none'
+		document.getElementById("ac3").style.display = 'none'
+		document.getElementsByClassName("tab")[1].style.backgroundColor = 'white'
+		document.getElementsByClassName("tab")[0].style.backgroundColor = '#9f9f9f'
+		document.getElementsByClassName("tab")[2].style.backgroundColor = '#9f9f9f'
+
+		document.getElementsByClassName("tab")[1].style.color = 'black'
+		document.getElementsByClassName("tab")[0].style.color = 'white'
+		document.getElementsByClassName("tab")[2].style.color = 'white'
+	}
+	function t3()  {
+		document.getElementById("ac3").style.display = 'block'
+		document.getElementById("ac2").style.display = 'none'
+		document.getElementById("ac1").style.display = 'none'
+		document.getElementsByClassName("tab")[2].style.backgroundColor = 'white'
+		document.getElementsByClassName("tab")[1].style.backgroundColor = '#9f9f9f'
+		document.getElementsByClassName("tab")[0].style.backgroundColor = '#9f9f9f'
+
+		document.getElementsByClassName("tab")[2].style.color = 'black'
+		document.getElementsByClassName("tab")[0].style.color = 'white'
+		document.getElementsByClassName("tab")[1].style.color = 'white'
+	}
+	
+	
+</script>
+</body>
+</html>

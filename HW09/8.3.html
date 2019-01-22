@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+
+		do {
+		var n = parseInt(prompt("Nhập n :"));
+		if (n<=0) {
+			alert("Nhập lại");
+		}
+		}while (n<=0) ;
+		var tong=0;
+		var gt=1;
+		for (var i = 1; i <= n; i++) {
+			gt *= i;
+            tong += i / gt;
+			
+		}
+		alert("tổng = " +tong);
+
+	</script>
+
+</body>
+</html>

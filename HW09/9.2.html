@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style type="text/css">
+	div {
+		background-color: #a4afff;
+		width: 466px;
+		margin-bottom:20px; 
+		
+	
+		
+	}
+		td {
+			border: 1px solid #878db6;
+			padding: 10px;
+
+		}
+		tr:hover {
+			background-color: #8ef963;
+		}
+	
+
+	</style>
+</head>
+<body>
+
+	<form name="from" onclick ="getValue()">
+	<div >
+		<table>
+		<tr>
+			 <td><input type='checkbox' name='name' id='check_all' value='' /></td>
+			<td>Lorem ipsum dolor sit amet, consectetur adipisicing elit</td>
+		</tr>
+
+		<tr>
+			 <td><input type='checkbox' name='name' id='check_all' value='' /></td>
+			<td>Deserunt mollit anim id est laborum.</td>
+		</tr>
+
+		<tr>
+			 <td><input type='checkbox' name='name' id='check_all' value='' /></td>
+			<td>Lorem ipsum dolor sit amet, consectetur adipisicing elit</td>
+		</tr>
+
+
+		<tr>
+		 <td><input type='checkbox' name='name' id='check_all' value='' /></td>
+			<td> Duis aute irure dolor in reprehenderit</td>
+		</tr>
+		<tr>
+			 <td><input type='checkbox' name='name' id='check_all' value='' /></td>
+			<td>Deserunt mollit anim id est laborum.</td>
+		</tr>
+		<tr>
+			 <td><input type='checkbox' name='name' id='check_all' value='' /></td>
+			<td> Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris</td>
+		</tr>
+		<tr>
+			 <td><input type='checkbox' name='name' id='check_all' value='' /></td>
+			<td>Lorem ipsum dolor sit amet, consectetur adipisicing elit</td>
+		</tr>
+		<tr>
+			 <td><input type='checkbox' name='name' id='check_all' value='' /></td>
+			<td> Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris</td>
+		</tr>
+	</table>
+
+	
+		
+	
+	</div>
+	 <input  onclick="check()" type="button"  value="CheckAll">
+        <input onclick="uncheck()" type="button" value="UnCheckAll">
+
+
+	
+
+	
+	
+	
+	
+</form>
+<script type="text/javascript">
+	 function check() 
+            {
+            	var checkboxes = document.getElementsByName('name');
+                
+                for (var i = 0; i < checkboxes.length; i++){
+                    checkboxes[i].checked = true;
+                }
+            };
+            function uncheck() 
+            {
+                
+                var checkboxes = document.getElementsByName('name');
+ 
+             
+                for (var i = 0; i < checkboxes.length; i++){
+                    checkboxes[i].checked = false;
+                }
+            };
+	
+</script> 
+	
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+
+
+
+<script type="text/javascript">
+	do {
+		var n = parseInt(prompt("Nhập n :"));
+		var m = parseInt(prompt("Nhập m :"));
+		if (m<n) {
+			alert("Bạn phải nhập m >= n");
+		}
+		}while (m<n) ;
+		var k = parseInt(prompt("Nhập k :"));
+			var sum =0;
+			for (var i = n+1; i < m; i++) { 
+            if (i % k == 0) {
+                sum = sum + i;
+            }
+
+        }
+        alert("Tổng các số chia hết cho k trong khoảng m đến n là: " + sum)
+</script>
+</body>
+</html>
