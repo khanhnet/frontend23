@@ -12,7 +12,7 @@
 			<tbody>
 				<tr>
 					<td>Họ và tên</td>
-					<td><input type="text" id="name" name="name" placeholder="Nhập họ tên ..." required="" ></td>
+					<td><input  " type="text" id="name" name="name" placeholder="Nhập họ tên ..." required="" ></td>
 					<td><div class="err">Yêu cầu nhập đầy đủ họ tên</div></td>
 				</tr>
 				<tr>
@@ -25,21 +25,25 @@
 
 				<tr>
 					<td>Email</td>
-					<td><input type="email" id="email" name="email" placeholder="Nhập Email ..." required=""></td>
+					<td><input   type="email" id="email" name="email" placeholder="Nhập Email ..." required=""></td>
+					<td><div class="err">Yêu cầu nhập email</div></td>
 				</tr>
 				<tr>
 					<td>Số điện thoại</td>
-					<td><input type="number" id="number" name="number" placeholder="Nhập số điện thoại ..." required=""></td>
+					<td><input   type="number" id="number" name="number" placeholder="Nhập số điện thoại ..." required=""></td>
+					<td><div class="err">Yêu cầu nhập số điện thoại</div></td>
 				</tr>
 				<tr>
 					<td>Mật khẩu</td>
-					<td><input type="password" id="pass" name="pass" placeholder="Nhập mật khẩu ..." required=""></td>
+					<td><input   type="password" id="pass" name="pass" placeholder="Nhập mật khẩu ..." required=""></td>
+					<td><div class="err">Yêu cầu nhập mật khẩu</div></td>
 				</tr>
 
 				<tr>
 					<td>Xác nhận mật khẩu</td>
 					<td>
-						<input type="password" id="checkpass" name="checkpass" placeholder="Xác nhận mật khẩu ..." required=""></td>
+						<input  type="password" id="checkpass" name="checkpass" placeholder="Xác nhận mật khẩu ..." required=""></td>
+						<td><div class="err">Yêu cầu nhập lại mật khẩu</div></td>
 				</tr>
 
 			</tbody>
@@ -52,9 +56,9 @@
 
 		
 
-		 	var checkname =document.getElementById('name');
+		 	var checkname =document.getElementsByClassName('name');
 
-		document.getElementById('name').addEventListener('click',
+		document.getElementsByClassName('name').addEventListener('click',
 			function(){
 					if (checkname.value.length<8) {
 			 document.getElementsByClassName('err')[0].style.display = "block"

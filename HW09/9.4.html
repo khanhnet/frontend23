@@ -23,67 +23,92 @@
 .active, .dot:hover {
   background-color: #fafafa;
 }
+
+
   </style>
+  
 </head>
 <body onload="loadanh()">
 
    
-    <img src="../images6/slide1.jpg" id="anh">
+    <img src="../images6/slide0.jpg" id="anh">
     <br>
-    <span class="dot" onclick="currentSlide(7)"></span> 
+   
+  <span class="dot" onclick="currentSlide(0)"></span> 
   <span class="dot" onclick="currentSlide(1)"></span> 
   <span class="dot" onclick="currentSlide(2)"></span> 
   <span class="dot" onclick="currentSlide(3)"></span> 
   <span class="dot" onclick="currentSlide(4)"></span> 
   <span class="dot" onclick="currentSlide(5)"></span> 
-  <span class="dot" onclick="currentSlide(6)"></span> 
+   <span class="dot" onclick="currentSlide(6)"></span> 
 
-    <button type="button" onclick="prev()" >&lt;</button>
-            <button type="button" onclick="next()" >&gt;</button>
+    <button id="prev" type="button" onclick="prev()" >&lt;</button>
+    <button id="next" type="button" onclick="next()" >&gt;</button>
            
 
 
 
 
 <script type="text/javascript">
+  
     var manganh =[]
     var dem=0;
+    var i=n;
+    var n;
     var dots = document.getElementsByClassName("dot");
     function loadanh(){
 
-      for (var i = 1; i < 8; i++) {
+      for (var i = 0; i < 7; i++) {
          manganh[i]= new Image();
       manganh[i].src= '../images6/slide'+i+'.jpg';
-      document.getElementsByClassName('dot')[i+1].style.backgroundColor = 'red'
-    
-
-   
       }
      
 
     }
+    
+    
+
+     
+      
+
 
     function next(){
       dem++;
       if (dem>6) {
-       dem=1;
+       dem=0;
         
       }
-      document.getElementById('anh').src=manganh[dem].src;
+       document.getElementById('anh').src=manganh[dem].src;
+        dots[dem].style.backgroundColor = 'red'
+      dots[dem-1].style.backgroundColor = '#bbb'
+        
+      
+     
+   
+    }
+    function currentSlide(n){
+      document.getElementById('anh').src=manganh[n].src;
+       
+
 
     }
+
+
       function prev(){
       dem--;
-      if (dem<1) {
+      if (dem<0) {
        dem=6;
       }
       document.getElementById('anh').src=manganh[dem].src;
+       dots[dem].style.backgroundColor = 'red'
+      dots[dem+1].style.backgroundColor = '#bbb'
 
-    }
+      }
   
-      setInterval(function(){
+
+    setInterval(function(){
         next()
-      },1000)
+      },10000)
     
 
 </script>
