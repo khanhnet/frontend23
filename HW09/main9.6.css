@@ -1,0 +1,23 @@
+body {
+	background-image: url(../images6/san-go-cao-cap-maple-carelia-uyenminh.com.jpg);
+}
+td {
+	
+	padding: 10px;
+}
+#form {
+	margin: auto;
+	
+}
+table {
+	    width: 600px;
+    margin: auto;
+    border: 1px solid;
+    border-radius: 20px;
+    padding: 20px;
+    background-color: wheat;
+}
+.err {
+	display: none;
+	color: red;
+}

@@ -1,26 +1,30 @@
-<!DOCTYPE html>
 <html>
-<head>
-	<title></title>
-	<meta charset="utf-8">
-
-</head>
-<body>
-	<input type="text"  class="name">
-	<button onclick="FE23()">click</button>
-
-
-
-
-
-<script language="javascript" src="main01.js">
-	 function FE23(){
-   	var input = document.getElementByName("name")[0];
-   	input = input.value;
-   	if (input=="") {
-   		alert("return");
-   	} else alert("ok");
-   }
-		</script>
-</body>
+    <body>
+        <div id="content">
+            <h5>ZentGroup</h5>
+            <h5>ZentGroup1</h5>
+            <h5>ZentGroup2</h5>
+        </div>
+       
+        <input type="button" value="Replace" id="btn-replace"/>
+       
+        <script language="javascript">
+          // Lấy button
+          var button = document.getElementById("btn-replace");
+           
+          // Thêm sự kiện click cho button
+          button.addEventListener("click", function(){
+             
+            // Tạo mới một thẻ
+            var p = document.createElement("h1");
+            p.innerHTML = "Xin chào!";
+                 
+            // Lấy thẻ cần replace
+            var replace = document.getElementsByTagName("h5")[0];
+             
+            // Replace
+            document.getElementById("content").replaceChild(p, replace);
+          });
+        </script>
+    </body>
 </html>

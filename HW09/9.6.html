@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Validate</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="main9.6.css">
+</head>
+<body>
+
+	<form name="frm" method = "post">
+		<table>
+			<tbody>
+				<tr>
+					<td>Họ và tên</td>
+					<td><input type="text" id="name" name="name" placeholder="Nhập họ tên ..." required="" ></td>
+					<td><div class="err">Yêu cầu nhập đầy đủ họ tên</div></td>
+				</tr>
+				<tr>
+					<td>Giới tính</td>
+					<td>
+						<input type="radio" name="sex">Nam
+						<input type="radio" name="sex">Nữ
+					</td>
+				</tr>
+
+				<tr>
+					<td>Email</td>
+					<td><input type="email" id="email" name="email" placeholder="Nhập Email ..." required=""></td>
+				</tr>
+				<tr>
+					<td>Số điện thoại</td>
+					<td><input type="number" id="number" name="number" placeholder="Nhập số điện thoại ..." required=""></td>
+				</tr>
+				<tr>
+					<td>Mật khẩu</td>
+					<td><input type="password" id="pass" name="pass" placeholder="Nhập mật khẩu ..." required=""></td>
+				</tr>
+
+				<tr>
+					<td>Xác nhận mật khẩu</td>
+					<td>
+						<input type="password" id="checkpass" name="checkpass" placeholder="Xác nhận mật khẩu ..." required=""></td>
+				</tr>
+
+			</tbody>
+		</table>
+		<input type="submit" value="Đăng kí" name="submit" onclick="getvalue()">
+		<button onclick="delAll()" >Xóa trắng</button>
+		
+	</form>
+	<script type="text/javascript">
+
+		
+
+		 	var checkname =document.getElementById('name');
+
+		document.getElementById('name').addEventListener('click',
+			function(){
+					if (checkname.value.length<8) {
+			 document.getElementsByClassName('err')[0].style.display = "block"
+		} 
+		if (checkname.value.length>8) {
+			 document.getElementsByClassName('err')[0].style.display = "none"
+		} 
+		
+
+		})
+		
+
+	
+
+
+
+	function getvalue(){
+		
+		
+		
+			
+			
+		}
+
+		function delAll(){
+
+		}
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <style type="text/css">
+    img {
+      width: 500px;
+      height: 800px;
+    }
+    .dot {
+  cursor:pointer;
+  height: 13px;
+  width: 13px;
+  margin: 0 2px;
+  background-color: #bbb;
+ position: relative;
+   bottom: 30px;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+  border-radius: 50%;
+}
+/* khi được hover, active đổi màu nền */
+.active, .dot:hover {
+  background-color: #fafafa;
+}
+  </style>
+</head>
+<body onload="loadanh()">
+
+   
+    <img src="../images6/slide1.jpg" id="anh">
+    <br>
+    <span class="dot" onclick="currentSlide(7)"></span> 
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+  <span class="dot" onclick="currentSlide(4)"></span> 
+  <span class="dot" onclick="currentSlide(5)"></span> 
+  <span class="dot" onclick="currentSlide(6)"></span> 
+
+    <button type="button" onclick="prev()" >&lt;</button>
+            <button type="button" onclick="next()" >&gt;</button>
+           
+
+
+
+
+<script type="text/javascript">
+    var manganh =[]
+    var dem=0;
+    var dots = document.getElementsByClassName("dot");
+    function loadanh(){
+
+      for (var i = 1; i < 8; i++) {
+         manganh[i]= new Image();
+      manganh[i].src= '../images6/slide'+i+'.jpg';
+      document.getElementsByClassName('dot')[i+1].style.backgroundColor = 'red'
+    
+
+   
+      }
+     
+
+    }
+
+    function next(){
+      dem++;
+      if (dem>6) {
+       dem=1;
+        
+      }
+      document.getElementById('anh').src=manganh[dem].src;
+
+    }
+      function prev(){
+      dem--;
+      if (dem<1) {
+       dem=6;
+      }
+      document.getElementById('anh').src=manganh[dem].src;
+
+    }
+  
+      setInterval(function(){
+        next()
+      },1000)
+    
+
+</script>
+</body>
+</html>
