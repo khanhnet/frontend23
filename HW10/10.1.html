@@ -1,115 +1,482 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <title></title>
-</head>
-<body>
-   <form id="example-advanced-form" action="#">
-    <h3>Account</h3>
-    <fieldset>
-        <legend>Account Information</legend>
- 
-        <label for="userName-2">User name *</label>
-        <input id="userName-2" name="userName" type="text" class="required">
-        <label for="password-2">Password *</label>
-        <input id="password-2" name="password" type="text" class="required">
-        <label for="confirm-2">Confirm Password *</label>
-        <input id="confirm-2" name="confirm" type="text" class="required">
-        <p>(*) Mandatory</p>
-    </fieldset>
- 
-    <h3>Profile</h3>
-    <fieldset>
-        <legend>Profile Information</legend>
- 
-        <label for="name-2">First name *</label>
-        <input id="name-2" name="name" type="text" class="required">
-        <label for="surname-2">Last name *</label>
-        <input id="surname-2" name="surname" type="text" class="required">
-        <label for="email-2">Email *</label>
-        <input id="email-2" name="email" type="text" class="required email">
-        <label for="address-2">Address</label>
-        <input id="address-2" name="address" type="text">
-        <label for="age-2">Age (The warning step will show up if age is less than 18) *</label>
-        <input id="age-2" name="age" type="text" class="required number">
-        <p>(*) Mandatory</p>
-    </fieldset>
- 
-    <h3>Warning</h3>
-    <fieldset>
-        <legend>You are to young</legend>
- 
-        <p>Please go away ;-)</p>
-    </fieldset>
- 
-    <h3>Finish</h3>
-    <fieldset>
-        <legend>Terms and Conditions</legend>
- 
-        <input id="acceptTerms-2" name="acceptTerms" type="checkbox" class="required"> <label for="acceptTerms-2">I agree with the Terms and Conditions.</label>
-    </fieldset>
-</form>
+<html lang="vi">
+    <head>
+        <meta charset="utf-8">
+        <title>Bài 4</title>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+        <style type="text/css">
+            * {
+                margin: 0;
+                padding: 0;
+            }
 
-<script type="text/javascript">
-    var form = $("#example-advanced-form").show();
- 
-form.steps({
-    headerTag: "h3",
-    bodyTag: "fieldset",
-    transitionEffect: "slideLeft",
-    onStepChanging: function (event, currentIndex, newIndex)
-    {
-        // Allways allow previous action even if the current form is not valid!
-        if (currentIndex > newIndex)
-        {
-            return true;
-        }
-        // Forbid next action on "Warning" step if the user is to young
-        if (newIndex === 3 && Number($("#age-2").val()) < 18)
-        {
-            return false;
-        }
-        // Needed in some cases if the user went back (clean up)
-        if (currentIndex < newIndex)
-        {
-            // To remove error styles
-            form.find(".body:eq(" + newIndex + ") label.error").remove();
-            form.find(".body:eq(" + newIndex + ") .error").removeClass("error");
-        }
-        form.validate().settings.ignore = ":disabled,:hidden";
-        return form.valid();
-    },
-    onStepChanged: function (event, currentIndex, priorIndex)
-    {
-        // Used to skip the "Warning" step if the user is old enough.
-        if (currentIndex === 2 && Number($("#age-2").val()) >= 18)
-        {
-            form.steps("next");
-        }
-        // Used to skip the "Warning" step if the user is old enough and wants to the previous step.
-        if (currentIndex === 2 && priorIndex === 3)
-        {
-            form.steps("previous");
-        }
-    },
-    onFinishing: function (event, currentIndex)
-    {
-        form.validate().settings.ignore = ":disabled";
-        return form.valid();
-    },
-    onFinished: function (event, currentIndex)
-    {
-        alert("Submitted!");
-    }
-}).validate({
-    errorPlacement: function errorPlacement(error, element) { element.before(error); },
-    rules: {
-        confirm: {
-            equalTo: "#password-2"
-        }
-    }
-});
-</script>
+            #logo {
+                width: 200px;
+                height: 100%;
+                
+                margin: 0 auto;
+            }
+                #logo img {
+                    height: 90%;
+                    line-height: 60px;
+                    max-width: 100%;
+                    
+                }
+            #content {
+                width: 100%;
+                padding-top: 70px;
+                padding-left: 10%;
+                padding-right: 10%;
+                box-sizing: border-box;
+            }
 
-</body>
+            .form-advanced {    
+                width: 70%;
+                
+            }
+            #head-form-panel {
+                height: 60px;
+                width: 100%;
+                padding-right: 10px;
+                box-sizing: border-box;
+                margin-bottom: 10px;
+            }
+            #head-form-panel .tab {
+                height: 100%;
+                padding: 10px;
+                font-size: 20px;
+                font-weight: bold;
+                box-sizing: border-box;
+                display: inline-block;
+                width: 20%;
+                margin-right: 10px;
+                background: #15C3D3;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+            #content-form-panel {
+                background: #ccc;
+                padding: 10px;
+                padding-bottom: 100px;
+                border-radius: 4px;
+            }
+            fieldset {
+                border: 0px;
+            }
+            .tab {
+                color: white;
+            }
+            legend {
+                width: 100%;
+                margin-bottom: 50px;
+                font-size: 30px;
+                font-weight: bold;
+                border-bottom: 1px solid #e5e5e5;
+            }
+            fieldset label, input {
+                display: block;
+                margin-top: 5px;
+                margin-bottom: 5px;
+            }
+            fieldset input {
+                padding: 5px 5px;
+                border:  1px solid #ccc;
+                border-radius: 4px;
+            }
+            .frm {
+                display: none;
+            }
+            .warning-content {
+                display: none;
+            }
+            .btn-frm-advanced {
+                margin-top: 10px;
+                width: 100%;
+                text-align: right;
+                color: white;
+            }
+            .btn-frm-advanced button {
+                margin-left: 5px;
+                padding: 7px;
+                font-size: 18px;
+                background: #2184be;
+                border: 1px solid #2184be;
+                cursor: pointer;
+                border-radius: 4px;
+                color: white;
+            }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                // ẩn tất cả các tab khác ngoài tab 1
+                $('#frm-account').show();
+
+                // ..........
+                // chạy các function định nghĩa các tab
+                accountTab();
+                // ..................
+
+                // profile tab
+                function profileTab() {
+                    $("#frm-account").hide();
+                    $("#frm-profile").show();
+
+                    var firstname = $('#firstname');
+                    var lastname = $("#lastname");
+                    var email   = $("#email");
+                    var address = $("#address");
+                    var age = $("#age");
+
+                    $("#Previous").css ({
+                        background: '#2184be',
+                    });
+
+                    $('#profile').css({
+                        background: '#2184be',
+                    });
+                    $('#warning').css({
+                        background: 'gray',
+                    });
+                    $('#finish').css({
+                        background: 'gray',
+                    });
+                    $('#account').css ({
+                        background: 'gray',
+                    });
+
+
+
+                    age.blur(function() {
+                        if(isNaN(age.val()) || age.val() == "") {
+                            age.css({
+                                background: '#fbe3e4',
+                                border : '1px solid red',
+                            });
+                        }
+                    });
+
+                    age.focus(function() {
+                        age.css({
+                            background: '',
+                            border : '',
+                        });
+                    });
+
+                    firstname.focus(function() {
+                        firstname.css({
+                            background: '',
+                            border : '',
+                        });
+                    });
+
+                    lastname.focus(function() {
+                        lastname.css({
+                            background: '',
+                            border : '',
+                        });
+                    });
+
+                    email.focus(function() {
+                        email.css({
+                            background: '',
+                            border : '',
+                        });
+                    });
+
+                    email.blur(function() {
+                        var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/; 
+                        if(!filter.test(email.val())) {
+                            email.css({
+                                background: '#fbe3e4',
+                                border : '1px solid red',
+                            });
+                        }
+                    });
+                    // next action
+                    $("#next").click(function() {
+                        if(firstname.val() != "" && lastname.val() != "" && email.val() != "" && age.val() != "" && !isNaN(age.val())) {
+                            $("#frm-profile").hide();
+                            warningTab(age.val());
+                        }else {
+
+                            if(firstname.val() == "") {
+                                firstname.css({
+                                    background: '#fbe3e4',
+                                    border : '1px solid red',
+                                });
+                            }
+
+                            if(lastname.val() == "") {
+                                lastname.css({
+                                    background: '#fbe3e4',
+                                    border : '1px solid red',
+                                });
+                            }
+
+                            if(email.val() == "") {
+                                email.css({
+                                    background: '#fbe3e4',
+                                    border : '1px solid red',
+                                });
+                            }
+                        }
+                    });
+
+
+                    $("#Previous").click(function() {
+
+                        $("#frm-profile").hide();
+                        accountTab();
+                    });
+
+                }
+                //end profile tab
+
+                // warning tab
+                function warningTab(tuoi) {
+                    $("#frm-profile").hide();
+                    $("#frm-warning").show();
+
+
+                    $('#profile').css({
+                        background: 'gray',
+                    });
+                    $('#warning').css({
+                        background: '#15C3D3',
+                    });
+                    $('#finish').css({
+                        background: 'gray',
+                    });
+                    $('#account').css ({
+                        background: 'gray',
+                    });
+
+
+
+
+                    if(parseInt(tuoi) >= 18 ) {
+                        $("#warning-c").hide();
+                        $("#continue-c").show();
+
+                        $("#next").click(function() {
+                            if($("#check").is(':checked')) {
+                                alert("SUMITED!")
+
+                                $('#profile').css({
+                                    background: '#2184be',
+                                    opacity: '0.5',
+                                });
+                                $('#finish').css({
+                                    background: '#2184be',
+                                    opacity: '0.5',
+                                });
+                                $('#warning').css({
+                                    background: '#2184be',
+                                    opacity: '0.5',
+                                });
+                                $('#account').css ({
+                                    background: '#2184be',
+                                    opacity: '0.5',
+                                });
+                            }else {
+                                finishTab();
+                            }
+                        });
+
+                    }else {
+                        $("#continue-c").hide();
+                        $("#warning-c").show();
+                    }
+
+                    $("#Previous").click(function() {
+                        $("#frm-warning").hide();
+                        profileTab();
+                    });
+                }
+                // .................... kết thức warning
+
+                function finishTab() {
+
+                    $('#profile').css({
+                        background: '#ccc',
+                    });
+                    $('#finish').css({
+                        background: 'red',
+                    });
+                    $('#warning').css({
+                        background: '#ccc',
+                    });
+                    $('#account').css ({
+                        background: '#ccc',
+                    });
+
+
+                    $("#Previous").click(function() {
+                        $("#frm-finish").hide();
+                        warningTab();
+                    });
+                }
+                // account tb.............................
+                function accountTab() {
+                    $("#frm-account").show();
+                    $("#frm-warning").hide();
+
+                    var name = $("#username");
+                    var pass = $("#password");
+                    var cfm_pass = $("#cfm-password");
+
+
+                    $("#Previous").css({
+                        background: '#ccc',
+                    });
+
+                    $('#profile').css({
+                        background: '#ccc',
+                    });
+                    $('#warning').css({
+                        background: '#ccc',
+                    });
+                    $('#finish').css({
+                        background: '#ccc',
+                    });
+                    
+                    $('#account').css({
+                        background: '#2184be',
+                    });
+
+                    // kiểm tra nhập pass
+                    $("#cfm-password").blur(function() {
+                        if($("#cfm-password").val() != $("#password").val()) {
+                            $("#cfm-password").css({
+                                background : '##fbe3e4',
+                                border : '1px solid red',
+                            });
+                        }
+                    });
+
+                    $("#cfm-password").focus(function() {
+                        $("#cfm-password").css({
+                            background: '',
+                            border : '',
+                        });
+                    });
+
+                    $("password").blur(function() {
+                        if($("#cfm-password").val() != $("#password").val()) {
+                            $("#cfm-password").css({
+                                background : '#fbe3e4',
+                                border : '1px solid red',
+                            });
+                        }
+                    });
+
+                    pass.focus(function() {
+                        pass.css({
+                            background: '',
+                            border : '',
+                        });
+                    });
+                    // kết thúc kiểm tra nhập pass
+
+                    $('#username').focus(function() {
+                        $('#username').css({
+                            background: '',
+                            border : '',
+                        });
+                    });
+
+
+
+                    // lắng nghe nút next
+                    $('#next').click(function() {
+                        var name = $("#username").val();
+                        if(name != "" && pass.val() == cfm_pass.val() && cfm_pass.val() != "" && pass.val() != "") {
+                            $("#frm-account").hide();
+                            profileTab();
+                        }else{
+                            $('#username').css({
+                                background: '#fbe3e4',
+                                border : '1px solid red',
+                            });
+
+                            pass.css({
+                                background: '#fbe3e4',
+                                border : '1px solid red',
+                            });
+
+                            cfm_pass.css({
+                                background: '#fbe3e4',
+                                border : '1px solid red',
+                            });
+                        }
+                    });
+                }
+            });
+        </script>
+    </head>
+    <body>
+
+        <div id="content">
+            <div class="form-advanced">
+                <div id="head-form-panel">
+                    <div id="account" class="tab">1. Account</div>
+                    <div id="profile" class="tab">2. Profile</div>
+                    <div id="warning" class="tab">3. Warning</div>
+                    <div id="finish" class="tab">4. Finish</div>
+                </div>
+
+                <div id="content-form-panel">
+                    <fieldset id="frm-account" class="frm">
+                        <legend >Account information</legend>
+                        <label for="username">User name *</label>
+                        <input type="text" id="username">
+
+                        <label for="password">Password *</label>
+                        <input type="password" id="password">
+
+                        <label for="cfm-password">Xác nhận password *</label>
+                        <input type="password" id="cfm-password">
+                        <p>(*) Mandatory</p>
+                    </fieldset>
+
+                    <fieldset id="frm-profile" class="frm">
+                        <legend >Profile Information</legend>
+                        <label for="firstname">First name *</label>
+                        <input type="text" id="firstname">
+
+                        <label for="lastname">Last name *</label>
+                        <input type="text" id="lastname">
+
+                        <label for="email">Email *</label>
+                        <input type="text" id="email">
+
+                        <label for="address">Address</label>
+                        <input type="text" id="address">
+
+                        <label for="age">Age *</label>
+                        <input type="text" id="age">
+
+                        <p>(*) Mandatory</p>
+                    </fieldset>
+
+                    <fieldset id="frm-warning" class="frm">
+                        <div id="warning-c" class="warning-content">
+                            <legend> You are to young </legend>
+                            <p>Please go away ;-)</p>
+                        </div>
+
+                        <div id="continue-c" class="warning-content">
+                            <legend> Terms and Conditions</legend>
+                            <input type="checkbox" id="check">  I agree with the Terms and Conditions.
+                        </div>
+                    </fieldset>
+                </div>
+                <div class="btn-frm-advanced">
+                    <button id="Previous"><i class="fas fa-arrow-left"></i>Previous</button>
+                    <button id="next">Next<i class="fas fa-arrow-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </body>
 </html>
