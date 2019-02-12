@@ -1,0 +1,304 @@
+body {
+	font-family: arial;
+	font-size: 12px;
+}
+
+#heading {
+	margin: auto;
+	width: 70%;
+}
+
+.text1 {
+	text-align: center;
+	padding-top: 30px;
+}
+.getst {
+	text-align: center;
+	color: white;
+	border: 1px solid;
+    width: 150px;
+    margin: auto;
+    border-radius: 20px;
+    padding: 5px;
+    background-color: #2e66ff;
+}
+li {
+	padding-bottom: 10px;
+	padding-top: 10px;
+}
+ul {
+	padding: 0px;
+}
+#img1 {
+	background-image: url(../images10/pro-bg.png);
+	background-repeat: repeat-x;
+	width: 100%;
+	height: 300px;
+}
+#tool {
+	width: 80%;
+	margin: auto;
+	margin-bottom: 30px;
+	text-align: center;
+}
+
+#textimg{
+	background-color: #DBF0FA;
+	width: 100%;
+	min-height: 550px;
+	padding-bottom: 20px;
+}
+#imgleft {
+	width: 40%;
+	float: left;
+
+}
+#textright {
+	width: 60%;
+	float: right;
+
+
+}
+.demo {
+	background-color: white ;
+	color: black ;
+	text-align: center;
+	border: 1px solid;
+    margin: auto;
+    border-radius: 20px;
+    padding: 5px;
+    margin-bottom: 20px;
+}
+.inline {
+	display: inline-block;
+	line-height: 30px;
+}
+#text2 {
+	padding-left: 30px;
+	padding-right: 10px;
+}
+
+.tool4 {
+	width: 20%;
+	display: inline-block;
+	border: 1px solid black;
+	margin-left: 5px;
+	margin-right: 5px;
+	
+}
+.text3{
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-top: 20px;
+}
+#content {
+	width: 100%;
+	background-color: #DBF0FA;
+	min-height: 500px;
+	padding-top: 30px;
+}
+#textleft {
+	display: inline-block;
+	float: left;
+	width: 60%;
+}
+#text4 {
+	margin-right: 10px;
+	margin-left: 10px;
+	padding-bottom: 30px;
+	border-bottom: 1px solid black;
+}
+#dola50 {
+	width: 60px;
+    text-align: center;
+    float: left;
+    margin-right: 10px;
+
+}
+#dola {
+	background-color: white;
+	padding-top: 10px;
+	padding-bottom: 10px;
+
+
+}
+#usd {
+	 background-color: #2e66ff;
+	 color: white;
+	 margin-top: -20px;
+}
+#ver {
+	padding-top: 5px;
+   
+}
+#form {
+	width: 30%;
+	float: right;
+	margin-top: 20px;
+
+}
+#borderform {
+    border-radius: 20px;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 10);
+	-moz-box-shadow:0px 0px 6px rgba(0, 0, 0, 10);
+	-webkit-box-shadow: 0px 0px 6px rgba(0, 0, 0, 10);
+}
+#filltext {
+	text-align: center;
+	background-color: black;
+    color: white;
+    margin: 0px;
+    line-height: 42px;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+}
+.fill {
+	list-style: none;
+	line-height: 30px;
+	border-bottom: 1px solid black;
+
+}
+.ulfill {
+	padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 20px;
+}
+#content1 {
+	width: 75%;
+	margin: auto;
+}
+.downow {
+	text-align: center;
+	color: white;
+	border: 1px solid;
+    margin: auto;
+    background-color: #2e66ff;
+    margin-top: 10px;
+    line-height: 35px;
+    border-radius: 5px;
+
+}
+.texti {
+	color: grey;
+}
+i {
+	padding-right: 10px;
+	padding-left: 10px;
+	width: 15px;
+
+}
+a {
+	list-style: none;
+	text-decoration: none;
+	color: #2fe3df;
+}
+#content2 {
+
+
+}
+#content3 {
+	width: 80%;
+	margin: auto;
+	text-align: center;
+
+}
+.custom {
+	width: 40%;
+	display: inline-block;
+	text-align: center;
+	margin-top: 40px;
+	padding-left: 10px;
+    padding-right: 10px;
+
+}
+.cus {
+	border: 1px solid;
+    border-radius: 40px;
+    padding: 5px;
+    z-index: 12;
+    position: relative;
+    background: white;
+
+}
+.text5 {
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 30px;
+	padding-bottom: 20px;
+	margin-top: -40px;
+	z-index: 5;
+	position: relative;
+	box-shadow: 0px 0px 6px rgba(0, 0, 0, 10);
+	-moz-box-shadow:0px 0px 6px rgba(0, 0, 0, 10);
+	-webkit-box-shadow: 0px 0px 6px rgba(0, 0, 0, 10);
+
+}
+.head {
+	line-height: 20px ;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+#end {
+	background-color: #273E63;
+	line-height: 30px;
+	width: 100%;
+	margin-top: 20px;
+		padding-top: 0px;
+}
+@media (max-width: 768px) {
+	#heading {
+		width: 100%;
+		text-align: center;
+	}
+	.head {
+		display: none;
+	}
+	#textimg {
+		min-height: 800px;
+	}
+	#imgleft {
+		width: 100%;
+	}
+	#textright {
+		width: 100%;
+		background-color: #DBF0FA;
+	}
+	.tool4 {
+		width: 40%;
+		margin-bottom: 20px;
+	}
+	#content1 {
+		width: 90%;
+	}
+	#textleft {
+		width: 100%;
+		min-height: 300px;
+		float: none;
+		text-align: center;
+	}
+	#form {
+		width: 100%;
+		float: none;
+		padding-bottom: 20px;
+	}
+	
+	.custom {
+		width: 90%;
+	}
+	#ver {
+		width: 50%;
+		margin: auto;
+	}
+	
+}
+@media (max-width: 480px ){
+
+	.tool4 {
+		width: 80%;
+		margin-bottom: 20px;
+	}
+	#ver {
+		width: 70%;
+	}
+
+}

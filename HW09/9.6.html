@@ -6,13 +6,15 @@
 	<link rel="stylesheet" type="text/css" href="main9.6.css">
 </head>
 <body>
+	
 
-	<form name="frm" method = "post">
+
+	<form name="myform" method = "post"  onsubmit="return validateform()" >
 		<table>
 			<tbody>
 				<tr>
 					<td>Họ và tên</td>
-					<td><input  " type="text" id="name" name="name" placeholder="Nhập họ tên ..." required="" ></td>
+					<td><input  type="text" id="name" name="name" placeholder="Nhập họ tên ..." required="" ></td>
 					<td><div class="err">Yêu cầu nhập đầy đủ họ tên</div></td>
 				</tr>
 				<tr>
@@ -30,12 +32,12 @@
 				</tr>
 				<tr>
 					<td>Số điện thoại</td>
-					<td><input   type="number" id="number" name="number" placeholder="Nhập số điện thoại ..." required=""></td>
+					<td><input   type="number" id="num" name="num" placeholder="Nhập số điện thoại ..." required=""></td>
 					<td><div class="err">Yêu cầu nhập số điện thoại</div></td>
 				</tr>
 				<tr>
 					<td>Mật khẩu</td>
-					<td><input   type="password" id="pass" name="pass" placeholder="Nhập mật khẩu ..." required=""></td>
+					<td><input   type="password" id="password" name="pass" placeholder="Nhập mật khẩu ..." required=""></td>
 					<td><div class="err">Yêu cầu nhập mật khẩu</div></td>
 				</tr>
 
@@ -46,47 +48,73 @@
 						<td><div class="err">Yêu cầu nhập lại mật khẩu</div></td>
 				</tr>
 
+				<tr>
+					<td><input type="submit" value="Đăng kí" name="submit" onclick="getvalue()">
+		<button onclick="delAll()" >Xóa trắng</button></td>
+				</tr>
+
 			</tbody>
+
 		</table>
-		<input type="submit" value="Đăng kí" name="submit" onclick="getvalue()">
-		<button onclick="delAll()" >Xóa trắng</button>
+		
 		
 	</form>
 	<script type="text/javascript">
+	
+
+		
+    function validateform() {
+        var name = document.myform.name.value;
+        var password = document.myform.password.value;
+ 
+        if (name == null || name == "") {
+           document.getElementsByClassName('err')[0].style.display = "block"
+            return false;
+        } else if (password.length < 6) {
+            alert("Password must be at least 6 characters long.");
+            return false;
+        }
+    }
+
+
+     
+        var firstpassword = document.myform.pass.value;
+        var secondpassword = document.myform.checkpass.value;
+ 
+        if (firstpassword == secondpassword) {
+            return true;
+        } else {
+            alert("password must be same!");
+            return false;
+        }
+    
+
+   
+        var num = document.myform.num.value;
+        if (isNaN(num)) {
+            document.getElementById("numloc").innerHTML = "Chỉ nhập giá trị số.";
+            return false;
+        } else {
+            return true;
+        }
+    
+
 
 		
 
-		 	var checkname =document.getElementsByClassName('name');
+		 	
 
-		document.getElementsByClassName('name').addEventListener('click',
-			function(){
-					if (checkname.value.length<8) {
-			 document.getElementsByClassName('err')[0].style.display = "block"
-		} 
-		if (checkname.value.length>8) {
-			 document.getElementsByClassName('err')[0].style.display = "none"
-		} 
+
 		
 
-		})
+		
 		
 
 	
 
 
 
-	function getvalue(){
-		
-		
-		
-			
-			
-		}
-
-		function delAll(){
-
-		}
-
+	
 
 </script>
 </body>

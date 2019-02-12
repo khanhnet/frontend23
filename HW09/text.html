@@ -1,154 +1,66 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-	<meta charset="UTF-8">
-	<title>Bai tap 01</title>
-	<style type="text/css">
-	*{
-		margin:0;
-		padding: 0;
-	}
-	#img{
-		margin: 0 auto;
-		position: relative;
-		margin-top: 50px;
-		width: 60%;
-		height: 500px;
-	}
-	.img-size{
-		max-width: 100%;
-		min-width: 100%;
-		max-height: 100%;
-		min-height: 100%;
-	}
-	#before{
-		position: absolute;
-		background: gray;
-		cursor: pointer;
-		border: 1px solid gray;
-		opacity: 0.8;
-		width: 50px;
-		top: 40%;
-		left: 0px;
-		display: none;
-	}
-	#after {
-		position: absolute;
-		background: gray;
-		cursor: pointer;
-		border: 1px solid gray;
-		opacity: 0.5;
-		width: 50px;
-		display: none;
-		top: 40%;
-		right: 0px;
-	}
-	.box{
-		width: 50%;
-		height: 30px;
-		position: absolute;
-		bottom: 2px;
-		right: 0px;
-		opacity: 0.8;
-	}
-	.button{
-		margin: 3px;
-		width: 50px;
-		height: 30px;
-		cursor: pointer;
-		background-color: red;
-	}
-</style>
-<script type="text/javascript" >
-			window.onload = function(){
-				document.getElementById('img').addEventListener('mouseover', function() {
-					document.getElementById('before').style.display="block";
-					document.getElementById('after').style.display="block";
-				});
-				document.getElementById('img').addEventListener('mouseout', function() {
-					document.getElementById('before').style.display="none";
-					document.getElementById('after').style.display="none";
-				});
-
-				var imgSlide 	= document.getElementsByClassName("img-size");
-				var prev 		= document.getElementById('before');
-				var next		= document.getElementById('after');
-				var numbSide = 0;
-
-				amimationSlide();
-
-				// button
-
-				prev.addEventListener('click', function() {
-					numbSide--;
-					showSlide();
-				});
-
-				next.addEventListener('click', function() {
-					numbSide++;
-					showSlide();
-				});
-				// end button
-
-				function amimationSlide() {
-					for(var i = 0; i < imgSlide.length; i++) {
-						imgSlide[i].style.display="none";
-					}
-
-					numbSide++;
-					if(numbSide < 0) {
-						numbSide = imgSlide.length - 1;
-					}
-					if(numbSide > imgSlide.length) {
-						numbSide = 1;
-					}
-
-					imgSlide[numbSide-1].style.display="block";
-
-					setTimeout(amimationSlide, 5000);
-				}
-
-				function showSlide() {
-					for(var i = 0; i < imgSlide.length; i++) {
-						imgSlide[i].style.display="none";
-					}
-
-					if(numbSide < 1) {
-						numbSide = imgSlide.length;
-					}
-					if(numbSide > imgSlide.length) {
-						numbSide = 1;
-					}
-
-					imgSlide[numbSide-1].style.display="block";
-				}
-			}
-
-			function elementSlide(n) {
-				for(var i = 0; i < document.getElementsByClassName("img-size").length; i++) {
-					document.getElementsByClassName("img-size")[i].style.display="none";
-				}
-				document.getElementsByClassName("img-size")[n].style.display="block";
-			}
-		</script>
+	<title></title>
 </head>
 <body>
-	<center id="img">
-		<img src="http://www.techrum.vn/chevereto/images/2017/04/04/Cmqc7.jpg" class="img-size">
-		<img src="http://www.techrum.vn/chevereto/images/2017/04/04/CmErR.jpg" class="img-size">
-		<img src="http://www.techrum.vn/chevereto/images/2017/04/04/CmDvT.jpg" class="img-size">
-		<img src="http://www.techrum.vn/chevereto/images/2017/04/04/CmNgr.jpg" class="img-size">
+	 <form name="myform" method="post" action="welcome1.php"
+        onsubmit="return validateform()">
+    Name: <input type="text" name="name"><br> 
+    <tr>
+    <td> Password: </td>
+    <td> <input type="password" name="password" /></td>
+  </tr>
+  <tr>
+    <td>Re-enter Password: </td> 
+    <td><input type="password" name="password2" /></td>
+  <tr>
 
+    <input type="submit" value="register">
+  </form>
+
+
+
+
+
+
+	<script type="text/javascript">
 		
-		<div class="box">
-			<button class="button" onclick="elementSlide(0)"></button>
-			<button class="button" onclick="elementSlide(1)"></button>
-			<button class="button" onclick="elementSlide(2)"></button>
-			<button class="button" onclick="elementSlide(3)"></button>
-		</div>
 
-		<img src="http://icons.iconarchive.com/icons/hopstarter/soft-scraps/256/Button-Forward-icon.png" class="before">
-		<img src="http://icons.iconarchive.com/icons/hopstarter/soft-scraps/256/Button-Forward-icon.png" class="after">
-	</center>
+		function validateform() {
+        var name = document.myform.name.value;
+        var password = document.myform.password.value;
+ 
+        if (name == null || name == "") {
+            alert("Name can't be blank");
+            return false;
+        } else if (password.length < 6) {
+            alert("Password must be at least 6 characters long.");
+            return false;
+        }
+
+         var firstpassword = document.myform.password.value;
+        var secondpassword = document.myform.password2.value;
+ 
+         if (firstpassword == secondpassword) {
+            return true;
+        } else {
+            alert("password must be same!");
+            return false;
+        }
+    
+
+
+
+
+
+
+
+
+
+    }
+
+	</script>
+
 </body>
 </html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<select onchange="mycity(this)">
+		<option value="1">ha noi</option>
+		<option value="2">ho chi minh</option>
+		
+	</select>
+	<select id="dis">
+		<option value="1">2 ba trung</option>
+		<option value="2">quang trung</option>
+	</select>
+	<script type="text/javascript">
+	function mycity(x){
+		if (x.value==1) {
+			document.getElementById('dis').innerHTML =
+			`<option value="1">2 ba trung</option>
+		<option value="2">quang trung</option>`;
+		} else if (x.value==2) {
+			document.getElementById('dis').innerHTML =
+			`<option value="1">quan7</option>
+		<option value="2">quan 6</option>`;
+	}
+	}
+</script>
+</body>
+</html>

@@ -3,7 +3,9 @@ body {
 }
 td {
 	
-	padding: 10px;
+	
+	padding-bottom: 10px;
+	padding-top: 10px;
 }
 #form {
 	margin: auto;
@@ -20,4 +22,5 @@ table {
 .err {
 	display: none;
 	color: red;
+	text-align: center;
 }

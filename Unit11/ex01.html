@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+	#content {
+		width: 100px;
+		height: 100px;
+		background-color: red;
+		display: none;
+	}
+		
+	</style>
+
+
+</head>
+<body>
+<!-- 	<h1 id="hello">hello hello</h1>
+<div>
+	<ul>
+		<li class="item">
+			<p>1</p>
+			<p>2</p>
+		</li>
+		<li>
+			<p>a</p>
+		</li>
+	</ul>
+	<h2>222222222222</h2>
+	<p>qwerty</p>
+</div>
+ -->
+
+
+	<button onclick="clickme()">click</button>
+	<div id="content"></div>
+
+
+	<script type="text/javascript" src="../js/jquery.min.js"></script>
+	<script type="text/javascript">
+		/*$('#hello').css({'color' : 'red','background' : 'green'})
+		$('.item').parents('div').css({'color' : 'blue','background' : 'grey'})
+		$('div').find('.item').css('color','white')
+		$('h2').next().css('color','green')
+		$('p').prev().css('background','pink')
+
+		$('h2').siblings().first()
+
+		$('h2').siblings().last()
+
+		$('h2').siblings().filter('p')
+
+		$('h2').siblings().not('p')
+		$('h2').siblings().eq(0)*/
+		function clickme() {
+			$('#content').slideToggle(3000, function(){
+				alert('hello')
+			});
+
+		}
+
+		
+
+	</script>
+
+</body>
+</html>

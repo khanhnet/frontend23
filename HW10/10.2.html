@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="vi">
+	<head>
+		<meta charset="utf-8">
+		<title>Jquery - bai 2</title>
+		<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				var plus = '<i class="fa fa-plus" aria-hidden="true"></i>';
+				var mimus = '<i class="fa fa-minus" aria-hidden="true"></i>';
+
+				$('#text1').show();
+
+				$('#btn-1').click(function() {
+					if($('#btn-1').html() == plus) {
+						$('#btn-1').html(mimus);
+					}else {
+						$('#btn-1').html(plus);
+					}
+
+					$('#btn-2').html(plus);
+					$('#btn-3').html(plus);
+					$('#btn-4').html(plus);
+
+					$('#text1').slideToggle();
+					$('#text2').hide();
+					$('#text3').hide();
+					$('#text4').hide();
+				});
+
+				$('#text2').hide();
+				$('#btn-2').click(function() {
+					if($('#btn-2').html() == plus) {
+						$('#btn-2').html(mimus);
+					}else {
+						$('#btn-2').html(plus);
+					}
+
+					$('#btn-1').html(plus);
+					$('#btn-4').html(plus);
+					$('#btn-3').html(plus);
+
+					$('#text2').slideToggle();
+					$('#text1').hide();
+					$('#text3').hide();
+					$('#text4').hide();
+				});
+
+				$('#text3').hide();
+				$('#btn-3').click(function() {
+					if($('#btn-3').html() == plus) {
+						$('#btn-3').html(mimus);
+					}else {
+						$('#btn-3').html(plus);
+					}
+
+					$('#btn-1').html(plus);
+					$('#btn-2').html(plus);
+					$('#btn-4').html(plus);
+
+					$('#text3').slideToggle();
+					$('#text4').hide();
+					$('#text2').hide();
+					$('#text1').hide();
+				});
+
+				$('#text4').hide();
+				$('#btn-4').click(function() {
+					if($('#btn-4').html() == plus) {
+						$('#btn-4').html(mimus);
+					}else {
+						$('#btn-4').html(plus);
+					}
+
+					$('#btn-1').html(plus);
+					$('#btn-2').html(plus);
+					$('#btn-3').html(plus);
+
+					$('#text4').slideToggle();
+					$('#text3').hide();
+					$('#text2').hide();
+					$('#text1').hide();
+				});
+			});
+		</script>
+
+		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			body{
+				 background-color: #000000de;
+			}
+			p {
+				padding-left: 20px;
+				padding-right: 20px;
+			}
+
+			#header {				
+				width: 100%;
+				color: white;
+				text-align: center;
+			}
+			#content {
+				width: 50%;
+				margin: 0 auto;
+				margin-top: 50px;
+				box-sizing: border-box;
+			}
+			.column {
+				width: 100%;
+				background: white;
+				box-sizing: border-box;
+			}
+			.column-title {
+				height: 40px;
+				width: 100%;
+				background: #000000d1;
+				box-shadow: 0px 0px 5px #cccccc;
+				box-sizing: border-box;
+				position: relative;
+				color: white;
+			}
+			.column-title button {
+				width: 40px;
+				height: 70%;
+				position: absolute;
+				top: 15%;
+				bottom: 15%;
+				left: -20px;
+				background: #00CC00;
+				border-color: #00CC00;
+				border-radius: 4px;
+				box-shadow: 0px 0px 5px #cccccc;
+			}
+			.column-title span {
+				color: lime;
+				position: absolute;
+				left: 50px;
+				top: 20%;
+				font-size: 18px;
+				font-weight: bold;
+			}
+			.column-content {
+				width: 100%;
+				padding: 5px;
+				background-color: #000000cf;
+    			color: white;
+				box-sizing: border-box;
+			}
+			.fa {
+				color: white;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="header">
+			<h1>Akordeon</h1>
+		</div>
+
+		<div id="content">
+			<div class="column">
+				<div class="column-title">
+					<button id="btn-1"><i class="fa fa-minus" aria-hidden="true"></i></button>
+					<span>This is an expanded column</span>
+				</div>
+				<div class="column-content" id="text1">
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. 
+					Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco 
+					Laboris nisi ut aliquip ex ea commodo
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni voluptatibus eius, exercitationem soluta minus eos debitis asperiores, ipsam aut, earum itaque rerum. Autem esse ipsum dolores voluptates saepe, ipsa sed. </p>
+				</div>
+			</div>
+
+			<div class="column">
+				<div class="column-title">
+					<button id="btn-2"><i class="fa fa-plus" aria-hidden="true"></i></button>
+					<span>Second column</span>
+				</div>
+				<div class="column-content" id="text2">
+					<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus odit, laudantium! Blanditiis error, tempore molestias quasi nobis at natus facilis aut voluptate rerum labore veritatis a, rem obcaecati minima debitis.<p>
+				</div>
+			</div>
+
+			<div class="column">
+				<div class="column-title">
+					<button id="btn-3"><i class="fa fa-plus" aria-hidden="true"></i></button>
+					<span>Third column</span>
+				</div>
+				<div class="column-content" id="text3">
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni voluptatibus eius, exercitationem soluta minus eos debitis asperiores, ipsam aut, earum itaque rerum. Autem esse ipsum dolores voluptates saepe, ipsa sed.
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					 consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					 cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					 proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+				</div>
+			</div>
+
+			<div class="column">
+				<div class="column-title">
+					<button id="btn-4"><i class="fa fa-plus" aria-hidden="true"></i></button>
+					<span>Fourth column</span>
+				</div>
+				<div class="column-content" id="text4">
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni voluptatibus eius, exercitationem soluta minus eos debitis asperiores, ipsam aut, earum itaque rerum. Autem esse ipsum dolores voluptates saepe, ipsa sed. </p>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
