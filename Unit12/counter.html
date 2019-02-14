@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		label {
+			color: red;
+		}
+	</style>
+</head>
+<body>
+	<h1 id="counter">12345</h1>
+
+	<form method="post" action="/"  id="login">
+		<div><input type="email" name="email" placeholder="email"></div>
+		<div><input type="password" name="password" placeholder="password"></div>
+		<div><input type="file" name="images"></div>
+		<button type="submit">submit</button>
+		
+	</form>
+
+
+	<script type="text/javascript" src="../js/jquery.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+
+<script src="../js/jquery.counterup.min.js"></script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
+<script src="../js/jquery.validate.min.js" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/additional-methods.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/localization/messages_vi.min.js"></script>
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		$('#counter').counterUp({
+			delay: 10,
+			time: 1000
+		});
+	});
+
+	$.validator.addMethod('filesize',function(value,element,param){
+		return this.optional(element)||(element.files[0].size<=param)
+	},"file must less than 1mb")
+
+	$('#login').validate({
+		rules:{
+			email:{
+				required:true,
+				email:true
+			},
+			password:{
+				required:true,
+				minlength:6
+			},
+			images:{
+				required:true,
+				extension:"jpg|png|jpeg"
+				filesize:1048576
+
+
+			}
+		}
+	})
+
+
+
+	
+</script>
+
+</body>
+</html>
