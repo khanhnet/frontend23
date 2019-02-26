@@ -85,7 +85,7 @@ img {
 
 @media (max-width:992px) {
 	.font {
-		font-size: 33px !important;
+		font-size: 40px !important;
 	}
 	.nav-link{
 		color: black !important;
@@ -108,6 +108,12 @@ img {
 	}
 
 	
+	
+}
+@media (max-width: 576px) {
+	.font {
+		font-size: 33px !important;
+	}
 	
 }
 

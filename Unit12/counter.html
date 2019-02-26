@@ -3,6 +3,8 @@
 <head>
 	<title></title>
 	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href ="../css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../css/animate.css">
 	<style type="text/css">
 		label {
 			color: red;
@@ -10,18 +12,48 @@
 	</style>
 </head>
 <body>
-	<h1 id="counter">12345</h1>
+	<div style="height: 1000px;"></div>
+	
+	<div class="container-fluid py-5 my-5">
+			
+			<div class="row">
+				<div class="col-lg-3 col-md-12 text-center">
+				<div class="mt-5 mb-5">
+					<h1 class="mt-3 mb-2 text-warning counter ">1240</h1>
+				</div>
+			</div>
+			<div class="col-lg-3 col-md-12 text-center">
+				<div class="mt-5 mb-5">
+					<h1 class="mt-3 mb-2  text-warning "><span class="counter">1750</span>+</h1>
+				</div>
+			</div>
+			<div class="col-lg-3 col-md-12 text-center">
+				<div class="mt-5 mb-5">
+					<h1 class="mt-3 mb-2  text-warning counter">984</h1>
+				</div>
+			</div>
+			<div class="col-lg-3 col-md-12 text-center">
+				<div class="mt-5 mb-5">
+					<h1 class="mt-3 mb-2  text-warning counter">96</h1>
+				</div>
+			</div>
+
+
+			</div>
+		
+		</div>
 
 	<form method="post" action="/"  id="login">
 		<div><input type="email" name="email" placeholder="email"></div>
 		<div><input type="password" name="password" placeholder="password"></div>
-		<div><input type="file" name="images"></div>
+		
 		<button type="submit">submit</button>
 		
 	</form>
 
 
 	<script type="text/javascript" src="../js/jquery.min.js"></script>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 	<script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
 
@@ -31,9 +63,16 @@
 <script src="../js/jquery.validate.min.js" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/additional-methods.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/localization/messages_vi.min.js"></script>
 
+	<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+
+
+	
+	
+	<script type="text/javascript" src="../js/wow.min.js"></script>
+
 <script type="text/javascript">
 	$(document).ready(function() {
-		$('#counter').counterUp({
+		$('.counter').counterUp({
 			delay: 10,
 			time: 1000
 		});
@@ -53,13 +92,7 @@
 				required:true,
 				minlength:6
 			},
-			images:{
-				required:true,
-				extension:"jpg|png|jpeg"
-				filesize:1048576
-
-
-			}
+			
 		}
 	})
 

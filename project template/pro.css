@@ -1,0 +1,59 @@
+#logo {
+	width: 200px
+}
+#menu {
+	height: 60px;
+}
+img {
+	width: 100%;
+}
+hr {
+	width: 70px;
+	height: 2px;
+}
+.heightimg {
+	height: 600px;
+}
+#counterup {
+	background-image: url(images/bg-section-facts.jpg);
+}
+.bgmuted {
+	background-color: #d0d0d0;
+}
+.bormuted {
+	border: 1px solid #d0d0d0;
+
+}
+.bormuted:hover .text-muted {
+	color: #ffc107 !important;
+}
+.card-header:hover {
+	color: white;
+}
+#fontleft {
+	width: 60%;
+	float: left;
+
+}
+#anh1 {
+	width: 40%;
+	float: right;
+}
+.slides {
+	height: 600px;
+}
+.mar{
+	font-size: 70px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
