@@ -16,7 +16,23 @@ new WOW().init();
       time: 1000
     });
   });
-
+ $('#login').validate({
+    rules:{
+      email:{
+        required:true,
+        email:true
+      },
+      name:{
+        required:true,
+        minlength: 2
+      },
+       name1:{
+        required:true,
+        minlength: 2
+      },
+      
+    }
+  })
 
    var filterizd = $('.filtr-container').filterizr({
    //options object
